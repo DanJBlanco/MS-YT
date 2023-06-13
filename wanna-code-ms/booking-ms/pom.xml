@@ -7,29 +7,41 @@
 		<artifactId>wanna-code-ms</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-
-	<groupId>com.djblancoh.product</groupId>
-	<artifactId>product-ms</artifactId>
+	<groupId>com.djblancoh.booking</groupId>
+	<artifactId>booking-ms</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>product-ms</name>
-	<description>Product Service</description>
+	<name>booking-ms</name>
+	<description>Booking Service </description>
 
 	<properties>
 		<java.version>17</java.version>
 	</properties>
 
+
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-data-mongodb</artifactId>
+			<artifactId>spring-boot-starter-data-jpa</artifactId>
 		</dependency>
+
+		<dependency>
+			<groupId>com.mysql</groupId>
+			<artifactId>mysql-connector-j</artifactId>
+			<scope>runtime</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
 			<version>4.0.2</version>
 		</dependency>
-
 	</dependencies>
+
 
 	<build>
 		<plugins>

@@ -16,6 +16,8 @@
 
 	<modules>
 		<module>product-ms</module>
+		<module>booking-ms</module>
+		<module>discovery-ms</module>
 	</modules>
 
 	<properties>

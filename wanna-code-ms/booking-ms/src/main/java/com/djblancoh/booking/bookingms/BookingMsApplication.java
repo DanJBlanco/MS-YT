@@ -1,14 +1,13 @@
-package com.djblancoh.product;
+package com.djblancoh.booking.bookingms;
 
-import com.netflix.discovery.EurekaNamespace;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class ProductMsApplication {
+public class BookingMsApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(ProductMsApplication.class, args);
+		SpringApplication.run(BookingMsApplication.class, args);
 	}
 
 }
