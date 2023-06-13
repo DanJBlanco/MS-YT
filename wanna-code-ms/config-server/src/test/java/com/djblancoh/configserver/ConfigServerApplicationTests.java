@@ -1,10 +1,10 @@
-package com.djblancoh.productms;
+package com.djblancoh.configserver;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class ProductMsApplicationTests {
+class ConfigServerApplicationTests {
 
 	@Test
 	void contextLoads() {
