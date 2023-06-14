@@ -19,10 +19,13 @@
 	</properties>
 
 	<dependencies>
+<!--		BBDD-->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-mongodb</artifactId>
 		</dependency>
+
+<!--		Discovery server-->
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
@@ -33,6 +36,8 @@
 			<artifactId>spring-cloud-config-client</artifactId>
 			<version>4.0.1</version>
 		</dependency>
+
+<!--		Config server -->
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-bootstrap</artifactId>
@@ -42,6 +47,13 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-actuator</artifactId>
 			<version>3.1.0</version>
+		</dependency>
+
+		<!--		Vault-->
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-vault-config</artifactId>
+			<version>4.0.0</version>
 		</dependency>
 	</dependencies>
 
