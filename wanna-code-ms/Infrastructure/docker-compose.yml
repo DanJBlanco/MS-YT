@@ -30,3 +30,13 @@ services:
       - '3306:3306'
     volumes:
       - ./data/mysql:/var/lib/mysql
+
+  rabbitmq:
+    image: rabbitmq:3.12-management
+    container_name: 'rabbitmq'
+    hostname: host-rabbitmq
+    ports:
+      - "5672:5672"
+    volumes:
+      - ./data/rabbitmq/data/:/var/lib/rabbitmq/
+      - ./data/rabbitmq/log/:/var/log/rabbitmq

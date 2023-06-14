@@ -1,5 +1,4 @@
 {
-
   "spring.data.mongodb.username":"root",
   "spring.data.mongodb.password":"secret"
 }

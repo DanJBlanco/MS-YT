@@ -67,6 +67,13 @@
 			<artifactId>spring-cloud-starter-vault-config</artifactId>
 			<version>4.0.0</version>
 		</dependency>
+
+<!--		Message broker-->
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-bus-amqp</artifactId>
+			<version>4.0.1 </version>
+		</dependency>
 	</dependencies>
 
 
