@@ -22,4 +22,8 @@ public class OrderItem {
     BigDecimal price;
     Integer quantity;
 
+    @ManyToOne
+    @JoinColumn(name = "order_id")
+    Order order;
+
 }

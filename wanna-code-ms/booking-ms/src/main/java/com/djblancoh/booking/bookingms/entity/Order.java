@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 import java.util.List;
 
 @Entity
-@Table(name = "order")
+@Table(name = "order-yt")
 @Builder
 @Data
 @AllArgsConstructor
@@ -20,6 +20,7 @@ public class Order {
     @GeneratedValue( strategy = GenerationType.IDENTITY)
     Long id;
     String orderNo;
-    @OneToMany( cascade = CascadeType.ALL)
+
+    @OneToMany(cascade = CascadeType.ALL)
     List<OrderItem> orderItemList;
 }
