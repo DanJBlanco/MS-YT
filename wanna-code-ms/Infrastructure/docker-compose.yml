@@ -40,3 +40,15 @@ services:
     volumes:
       - ./data/rabbitmq/data/:/var/lib/rabbitmq/
       - ./data/rabbitmq/log/:/var/log/rabbitmq
+
+  keycloak:
+    image: quay.io/keycloak/keycloak:21.1.1
+    container_name: yt-keycloak
+    hostname: host-keycloak
+    ports:
+    - "9090:8080"
+    environment:
+      KEYCLOAK_ADMIN: 'admin'
+      KEYCLOAK_ADMIN_PASSWORD: 'admin'
+    command:
+      - start-dev
