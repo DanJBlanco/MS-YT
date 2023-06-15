@@ -43,13 +43,15 @@
 <!--		Bus message broker-->
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-bus</artifactId>
+			<artifactId>spring-cloud-starter-bus-amqp</artifactId>
+			<version>4.0.1 </version>
 		</dependency>
 
 <!--		Discovery client-->
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-config</artifactId>
+			<artifactId>spring-cloud-config-client</artifactId>
+			<version>4.0.1</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
