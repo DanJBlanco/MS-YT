@@ -20,7 +20,7 @@ public class StockController {
     }
 
 
-    @GetMapping
+    @GetMapping("/{code}")
     public boolean stockAvailable(@PathVariable String code) {
         Optional<StockEntity> stock = stockRepository.findByCode(code);
 
