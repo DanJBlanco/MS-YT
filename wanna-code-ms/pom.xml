@@ -21,6 +21,7 @@
 		<module>config-server</module>
 		<module>api-gateway</module>
 		<module>stock-ms</module>
+		<module>security-jwt</module>
 	</modules>
 
 	<properties>
