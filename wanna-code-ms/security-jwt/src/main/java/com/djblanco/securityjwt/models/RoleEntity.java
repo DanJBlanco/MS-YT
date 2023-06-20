@@ -18,6 +18,6 @@ public class RoleEntity {
     protected Long id;
 
     @Enumerated(EnumType.STRING)
-    ERole role;
+    ERole name;
 
 }

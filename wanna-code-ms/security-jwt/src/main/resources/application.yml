@@ -11,3 +11,9 @@ spring:
     show-sql: true
     generate-ddl: true
 
+#JWT
+jwt:
+  secret:
+    key: nLKq7m2AXfLKRncYsqXtCKpBvrfyUMngxGg3LfIDZ4NenKXGSEpzmOnnqTtWf3mt
+  time:
+    expiration: 86400000

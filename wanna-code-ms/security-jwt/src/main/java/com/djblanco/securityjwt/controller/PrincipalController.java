@@ -7,6 +7,7 @@ import com.djblanco.securityjwt.repository.UserRepository;
 import com.djblanco.securityjwt.request.CreateUserDTO;
 import jakarta.validation.Valid;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Set;
@@ -15,9 +16,12 @@ import java.util.stream.Collectors;
 @RestController
 public class PrincipalController {
 
+    private PasswordEncoder passwordEncoder;
+
     private final UserRepository userRepository;
 
-    public PrincipalController(UserRepository userRepository) {
+    public PrincipalController(PasswordEncoder passwordEncoder, UserRepository userRepository) {
+        this.passwordEncoder = passwordEncoder;
         this.userRepository = userRepository;
     }
 
@@ -36,14 +40,14 @@ public class PrincipalController {
 
         Set<RoleEntity> roles = createUserDTO.getRoles().stream()
                 .map(rol -> {
-                    return RoleEntity.builder().role(ERole.valueOf(rol)).build();
+                    return RoleEntity.builder().name(ERole.valueOf(rol)).build();
                 }
                 )
                 .collect(Collectors.toSet());
 
         UserEntity user = UserEntity.builder()
                 .username(createUserDTO.getUsername())
-                .password(createUserDTO.getPassword())
+                .password(passwordEncoder.encode(createUserDTO.getPassword()))
                 .email(createUserDTO.getEmail())
                 .roles(roles)
                 .build();
